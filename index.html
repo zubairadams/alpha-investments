@@ -817,6 +817,13 @@ p {
   letter-spacing: -.08em;
 }
 
+.team-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .team-info {
   padding: 25px;
 }
@@ -1052,6 +1059,32 @@ p {
 .contact-card.green p,
 .contact-card.green a {
   color: #1a3219;
+}
+
+.contact-card.person-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  padding: 0;
+  overflow: hidden;
+  min-height: 180px;
+}
+
+.contact-person-image {
+  height: 100%;
+  min-height: 180px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.contact-person-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.contact-person-info {
+  padding: 28px;
 }
 
 .contact-card a:hover {
@@ -1411,6 +1444,18 @@ p {
     grid-template-columns: 110px 1fr;
   }
 
+  .contact-card.person-card {
+    grid-template-columns: 110px 1fr;
+  }
+
+  .contact-person-image {
+    min-height: 145px;
+  }
+
+  .contact-person-info {
+    padding: 20px;
+  }
+
   .team-image {
     min-height: 145px;
   }
@@ -1459,8 +1504,20 @@ p {
     font-size: 48px;
   }
 
-  .team-card {
+  .team-card,
+  .contact-card.person-card {
     grid-template-columns: 1fr;
+  }
+
+  .team-image,
+  .contact-person-image {
+    height: 130px;
+    min-height: 130px;
+  }
+
+  .team-info,
+  .contact-person-info {
+    padding: 20px;
   }
 
   .team-image {
@@ -2452,7 +2509,10 @@ p {
             <article class="team-card">
 
               <div class="team-image">
-                <span>NM</span>
+                <img
+                  src="ntsekhe-moiloa.jpg"
+                  alt="Ntsekhe Moiloa"
+                >
               </div>
 
               <div class="team-info">
@@ -2480,7 +2540,10 @@ p {
             <article class="team-card">
 
               <div class="team-image">
-                <span>SN</span>
+                <img
+                  src="safs-narker.jpg"
+                  alt="Safs Narker"
+                >
               </div>
 
               <div class="team-info">
@@ -2932,38 +2995,56 @@ p {
 
           <div class="contact-grid">
 
-            <article class="contact-card">
+            <article class="contact-card person-card">
 
-              <h3>
-                Ntsekhe Moiloa
-              </h3>
+              <div class="contact-person-image">
+                <img
+                  src="ntsekhe-moiloa.jpg"
+                  alt="Ntsekhe Moiloa"
+                >
+              </div>
 
-              <p>
-                Investment team
-              </p>
+              <div class="contact-person-info">
+                <h3>
+                  Ntsekhe Moiloa
+                </h3>
 
-              <a href="mailto:ntsekhe.moiloa@alphainv.co.za">
-                Email
-                ntsekhe.moiloa@alphainv.co.za ↗
-              </a>
+                <p>
+                  Investment team
+                </p>
+
+                <a href="mailto:ntsekhe.moiloa@alphainv.co.za">
+                  Email
+                  ntsekhe.moiloa@alphainv.co.za ↗
+                </a>
+              </div>
 
             </article>
 
 
-            <article class="contact-card green">
+            <article class="contact-card green person-card">
 
-              <h3>
-                Safs Narker
-              </h3>
+              <div class="contact-person-image">
+                <img
+                  src="safs-narker.jpg"
+                  alt="Safs Narker"
+                >
+              </div>
 
-              <p>
-                Investment team
-              </p>
+              <div class="contact-person-info">
+                <h3>
+                  Safs Narker
+                </h3>
 
-              <a href="mailto:safs.narker@alphainv.co.za">
-                Email
-                safs.narker@alphainv.co.za ↗
-              </a>
+                <p>
+                  Investment team
+                </p>
+
+                <a href="mailto:safs.narker@alphainv.co.za">
+                  Email
+                  safs.narker@alphainv.co.za ↗
+                </a>
+              </div>
 
             </article>
 
