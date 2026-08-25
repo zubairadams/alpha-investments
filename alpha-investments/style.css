@@ -1,0 +1,1199 @@
+/* =========================================================
+   ALPHA INVESTMENT MANAGERS
+   CLEAN RESPONSIVE STYLESHEET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #071510;
+  color: #eef1e9;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  --black: #071510;
+  --dark: #0a1c15;
+  --dark-2: #10271d;
+  --green: #82b798;
+  --green-light: #a8cdb6;
+  --cream: #edf0e7;
+  --muted: #89968f;
+  --border: rgba(232, 239, 229, 0.13);
+
+  --page: clamp(24px, 5vw, 80px);
+  --content: 1280px;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+main {
+  width: 100%;
+}
+
+section {
+  width: 100%;
+}
+
+.eyebrow {
+  display: inline-block;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  letter-spacing: .14em;
+
+  color: #91a098;
+}
+
+.section-number {
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  color: var(--green);
+
+  letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.navbar {
+  position: absolute;
+  z-index: 50;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
+  padding: 0 var(--page);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+
+  letter-spacing: .07em;
+  line-height: 1.1;
+}
+
+.logo span {
+  margin-top: 4px;
+
+  color: #718078;
+
+  font-size: 7px;
+  letter-spacing: .15em;
+}
+
+.navbar nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar nav a {
+  color: #a6b1aa;
+
+  font-size: 11px;
+
+  transition: color .25s ease;
+}
+
+.navbar nav a:hover {
+  color: white;
+}
+
+.nav-cta {
+  padding: 10px 14px;
+
+  border: 1px solid var(--border);
+
+  font-size: 10px;
+
+  transition: .25s ease;
+}
+
+.nav-cta:hover {
+  background: var(--cream);
+  color: var(--black);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 780px;
+  height: 100vh;
+  max-height: 900px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 72% 40%,
+      #173d2b 0%,
+      #0d241a 32%,
+      #071510 70%
+    );
+}
+
+.hero-image {
+  position: absolute;
+
+  right: -5%;
+  top: 8%;
+
+  width: 55%;
+  height: 90%;
+
+  opacity: .55;
+
+  pointer-events: none;
+}
+
+.wave {
+  position: absolute;
+
+  width: 120%;
+  height: 80%;
+
+  right: -15%;
+  top: 12%;
+
+  border-radius: 50%;
+
+  transform: rotate(-18deg);
+
+  background:
+    repeating-radial-gradient(
+      ellipse at center,
+      transparent 0 11px,
+      rgba(116, 190, 146, .16) 12px 13px
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(900px, 70%);
+
+  margin-left: var(--page);
+}
+
+.hero h1 {
+  margin: 20px 0;
+
+  max-width: 950px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(52px, 6.5vw, 92px);
+
+  font-weight: 400;
+
+  line-height: .95;
+
+  letter-spacing: -.065em;
+}
+
+.hero h1 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.hero-description {
+  max-width: 470px;
+
+  margin: 0 0 27px;
+
+  color: #a8b3ad;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 17px;
+
+  font-size: 10px;
+
+  transition: .25s ease;
+}
+
+.button-light {
+  background: var(--cream);
+  color: var(--black);
+}
+
+.button-light:hover {
+  background: white;
+}
+
+.button-outline {
+  border: 1px solid var(--border);
+  color: #d8ded9;
+}
+
+.button-outline:hover {
+  border-color: var(--green);
+  color: var(--green);
+}
+
+.hero-index {
+  position: absolute;
+
+  left: var(--page);
+  bottom: 28px;
+
+  display: flex;
+  gap: 22px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  color: #637169;
+
+  text-transform: uppercase;
+}
+
+.hero-index span:first-child {
+  color: var(--green);
+}
+
+.scroll {
+  position: absolute;
+
+  right: var(--page);
+  bottom: 30px;
+
+  color: #66736c;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   STANDARD SECTION
+========================================================= */
+
+.section {
+  position: relative;
+
+  max-width: var(--content);
+
+  margin: auto;
+
+  padding: 110px var(--page);
+}
+
+.section-heading {
+  max-width: 760px;
+
+  margin-left: 65px;
+}
+
+.section-heading h2,
+.firm h2,
+.contact h2 {
+  margin: 18px 0 20px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(44px, 5vw, 70px);
+
+  font-weight: 400;
+
+  line-height: .98;
+
+  letter-spacing: -.06em;
+}
+
+.section-heading h2 em,
+.firm h2 em,
+.contact h2 em {
+  color: var(--green);
+  font-style: normal;
+}
+
+.section-heading p {
+  max-width: 520px;
+
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   OPPORTUNITY
+========================================================= */
+
+.opportunity {
+  padding-bottom: 120px;
+}
+
+.principles {
+  margin: 75px 0 65px 65px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+.principles article {
+  padding-top: 15px;
+
+  border-top: 1px solid var(--border);
+}
+
+.number {
+  display: block;
+
+  margin-bottom: 32px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+
+  color: var(--green);
+}
+
+.principles h3,
+.process h3,
+.performance-cards h3 {
+  margin-bottom: 9px;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.principles p,
+.process p,
+.performance-cards p {
+  max-width: 280px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  line-height: 1.7;
+}
+
+.architecture-image {
+  position: relative;
+
+  height: 360px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      110deg,
+      #101f1a,
+      #142e22 50%,
+      #081510
+    );
+}
+
+.architecture-lines {
+  position: absolute;
+
+  inset: -30%;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 42px,
+      rgba(137, 188, 158, .1) 43px 44px
+    );
+
+  transform:
+    perspective(600px)
+    rotateY(-20deg)
+    rotateX(10deg);
+}
+
+.architecture-image span {
+  position: absolute;
+
+  left: 20px;
+  bottom: 18px;
+
+  color: #78857e;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   APPROACH
+========================================================= */
+
+.approach {
+  padding-top: 110px;
+  padding-bottom: 120px;
+}
+
+.process {
+  margin: 65px 0 0 65px;
+
+  border-top: 1px solid var(--border);
+}
+
+.process-item {
+  min-height: 105px;
+
+  display: grid;
+
+  grid-template-columns: 100px 1fr;
+
+  align-items: center;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.process-number {
+  font-family: "DM Mono", monospace;
+
+  color: var(--green);
+
+  font-size: 9px;
+}
+
+.process h3 {
+  margin-bottom: 5px;
+}
+
+
+/* =========================================================
+   PERFORMANCE
+========================================================= */
+
+.performance {
+  max-width: none;
+
+  padding: 110px var(--page);
+
+  background: #091b14;
+}
+
+.performance .section-heading {
+  max-width: 850px;
+
+  margin-left: 65px;
+}
+
+.chart {
+  max-width: 1150px;
+
+  margin: 70px auto 60px;
+
+  padding: 22px;
+
+  border: 1px solid var(--border);
+
+  background: #071711;
+}
+
+.chart-labels {
+  display: flex;
+  gap: 20px;
+
+  margin-bottom: 15px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+
+  color: #75837b;
+
+  text-transform: uppercase;
+}
+
+.chart-labels span:first-child {
+  color: var(--green);
+}
+
+.performance-chart {
+  width: 100%;
+  height: 280px;
+}
+
+.area {
+  fill: url(#alphaGradient);
+}
+
+.alpha {
+  fill: none;
+
+  stroke: var(--green);
+  stroke-width: 3;
+}
+
+.benchmark {
+  fill: none;
+
+  stroke: #4d5b54;
+  stroke-width: 1.5;
+
+  stroke-dasharray: 6 6;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 15px;
+
+  border-top: 1px solid var(--border);
+
+  color: #68766e;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+}
+
+.performance-cards {
+  max-width: 1150px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+.performance-cards article {
+  padding-top: 15px;
+
+  border-top: 1px solid var(--border);
+}
+
+.performance-cards article > span {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: var(--green);
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   FIRM
+========================================================= */
+
+.firm {
+  min-height: 650px;
+
+  display: grid;
+
+  grid-template-columns: 48% 52%;
+
+  background: #0a1c15;
+}
+
+.firm-image {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 500px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #122c22,
+      #071510
+    );
+}
+
+.mountain {
+  position: absolute;
+
+  left: -10%;
+  bottom: -20%;
+
+  width: 125%;
+  height: 70%;
+
+  background:
+    linear-gradient(
+      145deg,
+      transparent 0 35%,
+      #10271e 35% 55%,
+      #071510 55%
+    );
+
+  transform: rotate(-4deg);
+}
+
+.firm-content {
+  position: relative;
+
+  padding: 105px 8vw;
+}
+
+.firm-content .section-number {
+  margin-bottom: 25px;
+}
+
+.firm h2 {
+  font-size: clamp(45px, 5vw, 70px);
+}
+
+.firm p {
+  max-width: 450px;
+
+  margin-bottom: 25px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.text-link {
+  color: var(--green);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+  min-height: 650px;
+
+  padding: 110px var(--page) 25px;
+
+  background: var(--cream);
+
+  color: var(--black);
+}
+
+.contact-inner {
+  max-width: 1150px;
+
+  margin: auto;
+}
+
+.contact .eyebrow {
+  color: #69756f;
+}
+
+.contact h2 {
+  max-width: 900px;
+
+  margin-top: 18px;
+
+  font-size: clamp(60px, 8vw, 110px);
+}
+
+.contact h2 em {
+  color: #397354;
+}
+
+.contact-button {
+  display: inline-block;
+
+  margin-top: 10px;
+
+  padding: 13px 19px;
+
+  background: var(--black);
+
+  color: white;
+
+  font-size: 10px;
+}
+
+.contact-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+
+  margin-top: 100px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid rgba(0, 0, 0, .14);
+}
+
+.contact-grid small {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #727d77;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+}
+
+.contact-grid a,
+.contact-grid p {
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.contact footer {
+  max-width: 1150px;
+
+  margin: 90px auto 0;
+
+  padding-top: 15px;
+
+  border-top: 1px solid rgba(0, 0, 0, .14);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #69756f;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  :root {
+    --page: 35px;
+  }
+
+  .navbar nav {
+    gap: 18px;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero-content {
+    width: 75%;
+  }
+
+  .section-heading {
+    margin-left: 45px;
+  }
+
+  .principles,
+  .process {
+    margin-left: 45px;
+  }
+
+  .performance .section-heading {
+    margin-left: 45px;
+  }
+
+  .firm-content {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  :root {
+    --page: 20px;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+
+  /* NAV */
+
+  .navbar {
+    height: 62px;
+
+    padding: 0 20px;
+  }
+
+  .navbar nav {
+    display: none;
+  }
+
+  .logo {
+    font-size: 11px;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 680px;
+    height: 100svh;
+    max-height: none;
+
+    align-items: flex-end;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 70%;
+
+    right: -25%;
+    top: 12%;
+
+    opacity: .3;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 0 20px 100px;
+  }
+
+  .hero h1 {
+    max-width: 600px;
+
+    margin: 14px 0 18px;
+
+    font-size: clamp(44px, 13vw, 64px);
+
+    line-height: .94;
+  }
+
+  .hero-description {
+    max-width: 390px;
+
+    margin-bottom: 22px;
+
+    font-size: 12px;
+  }
+
+  .hero-buttons {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 7px;
+  }
+
+  .button {
+    width: 100%;
+
+    padding: 12px 8px;
+
+    text-align: center;
+  }
+
+  .hero-index,
+  .scroll {
+    display: none;
+  }
+
+
+  /* SECTIONS */
+
+  .section {
+    padding: 75px 20px;
+  }
+
+  .section-number {
+    position: static;
+
+    display: block;
+
+    margin-bottom: 20px;
+  }
+
+  .section-heading {
+    margin-left: 0;
+  }
+
+  .section-heading h2,
+  .firm h2 {
+    margin: 14px 0 18px;
+
+    font-size: clamp(40px, 12vw, 58px);
+  }
+
+  .section-heading p {
+    font-size: 12px;
+  }
+
+
+  /* OPPORTUNITY */
+
+  .opportunity {
+    padding-bottom: 80px;
+  }
+
+  .principles {
+    margin: 50px 0 45px;
+
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .principles article {
+    padding: 18px 0 22px;
+  }
+
+  .number {
+    margin-bottom: 22px;
+  }
+
+  .principles h3 {
+    font-size: 15px;
+  }
+
+  .architecture-image {
+    height: 250px;
+  }
+
+
+  /* APPROACH */
+
+  .approach {
+    padding-top: 75px;
+    padding-bottom: 80px;
+  }
+
+  .process {
+    margin: 45px 0 0;
+  }
+
+  .process-item {
+    min-height: 95px;
+
+    grid-template-columns: 50px 1fr;
+  }
+
+  .process h3 {
+    font-size: 14px;
+  }
+
+  .process p {
+    font-size: 11px;
+  }
+
+
+  /* PERFORMANCE */
+
+  .performance {
+    padding: 75px 20px;
+  }
+
+  .performance .section-heading {
+    margin-left: 0;
+  }
+
+  .chart {
+    margin: 45px 0 45px;
+
+    padding: 12px;
+  }
+
+  .performance-chart {
+    height: 200px;
+  }
+
+  .performance-cards {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+  .performance-cards article {
+    padding: 18px 0;
+  }
+
+  .performance-cards article > span {
+    margin-bottom: 18px;
+  }
+
+
+  /* FIRM */
+
+  .firm {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .firm-image {
+    min-height: 300px;
+
+    order: 1;
+  }
+
+  .firm-content {
+    order: 2;
+
+    padding: 70px 20px;
+  }
+
+  .firm h2 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+
+  /* CONTACT */
+
+  .contact {
+    min-height: auto;
+
+    padding: 75px 20px 20px;
+  }
+
+  .contact h2 {
+    margin: 15px 0 10px;
+
+    font-size: clamp(58px, 17vw, 85px);
+  }
+
+  .contact-button {
+    margin-top: 10px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 25px;
+
+    margin-top: 65px;
+  }
+
+  .contact footer {
+    margin-top: 60px;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .hero {
+    min-height: 620px;
+  }
+
+  .hero-content {
+    padding-bottom: 75px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2,
+  .firm h2 {
+    font-size: 40px;
+  }
+
+  .contact h2 {
+    font-size: 55px;
+  }
+}
