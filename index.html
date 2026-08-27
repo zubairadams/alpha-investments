@@ -39,7 +39,7 @@
   --max: 1280px;
   --pad: 42px;
 
-  --header-height: 94px;
+  --header-height: 78px;
 }
 
 /* =========================================================
@@ -133,11 +133,9 @@ p {
 
 .display {
   font-size: clamp(46px, 6vw, 82px);
-  line-height: 1.04;
-  letter-spacing: -.035em;
+  line-height: .94;
+  letter-spacing: -.065em;
   font-weight: 450;
-  word-spacing: .04em;
-  max-width: 1000px;
 }
 
 .body-copy {
@@ -188,7 +186,7 @@ p {
 }
 
 .logo {
-  width: 178px;
+  width: 158px;
   flex-shrink: 0;
 }
 
@@ -200,26 +198,20 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 27px;
 }
 
 .nav-links a {
   position: relative;
 
-  color: rgba(255,255,255,.84);
+  color: rgba(255,255,255,.78);
 
-  font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: .13em;
-  line-height: 1;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .1em;
   text-transform: uppercase;
 
-  transition: color .2s ease, transform .2s ease;
-}
-
-.nav-links a:hover {
-  transform: translateY(-1px);
+  transition: color .2s ease;
 }
 
 .nav-links a::after {
@@ -227,7 +219,7 @@ p {
 
   position: absolute;
   left: 0;
-  bottom: -10px;
+  bottom: -7px;
 
   width: 0;
   height: 1px;
@@ -242,18 +234,13 @@ p {
   color: white;
 }
 
-.nav-links a:hover {
-  transform: translateY(-1px);
-}
-
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
 }
 
 .nav-cta {
-  padding: 13px 18px !important;
-  letter-spacing: .11em !important;
+  padding: 10px 14px !important;
   border: 1px solid rgba(145,214,140,.55);
   color: var(--green) !important;
 }
@@ -345,12 +332,10 @@ p {
   margin-top: 18px;
   margin-bottom: 24px;
 
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(55px, 7.5vw, 108px);
-  line-height: 1.02;
-  letter-spacing: .015em;
-  word-spacing: .025em;
-  font-weight: 400;
+  line-height: .88;
+  letter-spacing: -.07em;
+  font-weight: 450;
 }
 
 .hero h1 span {
@@ -696,12 +681,9 @@ p {
 .page-hero h1 {
   margin-top: 16px;
 
-  font-family: "Avenir Next", "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: clamp(48px, 7vw, 88px);
-  line-height: 1.08;
-  letter-spacing: .012em;
-  word-spacing: .025em;
-  font-weight: 400;
+  line-height: .9;
+  letter-spacing: -.065em;
   font-weight: 450;
 }
 
@@ -1249,12 +1231,11 @@ p {
   }
 
   .nav-links {
-    gap: 22px;
+    gap: 16px;
   }
 
   .nav-links a {
-    font-size: 10px;
-    letter-spacing: .1em;
+    font-size: 9px;
   }
 
   .section-grid {
@@ -1285,7 +1266,7 @@ p {
 
   :root {
     --pad: 20px;
-    --header-height: 76px;
+    --header-height: 68px;
   }
 
   .site-header {
@@ -1293,7 +1274,7 @@ p {
   }
 
   .logo {
-    width: 150px;
+    width: 137px;
   }
 
   .mobile-menu-button {
@@ -1301,8 +1282,6 @@ p {
   }
 
   .nav-links {
-    gap: 0;
-
     position: fixed;
 
     top: var(--header-height);
@@ -1371,8 +1350,6 @@ p {
 
   .hero h1 {
     font-size: clamp(50px, 15vw, 75px);
-    line-height: 1.03;
-    letter-spacing: .005em;
   }
 
   .hero .body-copy {
@@ -1428,8 +1405,6 @@ p {
 
   .page-hero h1 {
     font-size: clamp(47px, 13vw, 68px);
-    line-height: 1.06;
-    letter-spacing: .005em;
   }
 
   .page-hero p {
@@ -1527,8 +1502,6 @@ p {
 
   .hero h1 {
     font-size: 48px;
-    line-height: 1.03;
-    letter-spacing: 0;
   }
 
   .team-card,
